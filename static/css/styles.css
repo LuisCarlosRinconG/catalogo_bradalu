@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 🔹 Encabezado Mejorado */
+header {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    max-width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+nav ul li a:hover {
+    background: white;
+    color: #ff758c;
+}
+
+/* 🔹 Catálogo */
+main {
+    padding: 40px 20px;
+    text-align: center;
+    flex: 1;
+}
+
+.catalogo {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.producto {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    max-width: 300px;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+}
+
+.producto img {
+    width: 200px; /* Ajusta según el tamaño deseado */
+    height: 200px; /* Ajusta según el tamaño deseado */
+    object-fit: cover; /* Recorta la imagen para que encaje en el tamaño */
+    border-radius: 10px; /* Opcional, para bordes redondeados */
+}
+
+
+/* 🔹 Footer */
+footer {
+    width: 100%;
+    background: linear-gradient(135deg, #535253, #585758);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: auto;
+}
+
+.contenedor-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 15px;
+}
+
+.content-foo {
+    flex: 1;
+    min-width: 180px;
+    padding: 10px;
+    text-align: center;
+}
+
+.content-foo a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 5px;
+    transition: color 0.3s;
+    font-weight: bold;
+}
+
+.content-foo a:hover {
+    color: #ffd700;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .logo {
+        margin-bottom: 10px;
+    }
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+    }
+    nav ul li {
+        margin: 5px 0;
+    }
+    .contenedor-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.agregar-carrito {
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+    text-align: center;
+}
+
+.agregar-carrito:hover {
+    background-color: #e6005c;
+}
+
+#carrito-icono {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff4081; /* Color llamativo */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#carrito-icono:hover {
+    background-color: #e03570;
+}
+
+#contador-carrito {
+    background: white;
+    color: #ff4081;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-size: 14px;
+}
+
+.carrito-img {
+    width: 80px; /* Tamaño más pequeño */
+    height: 80px;
+    object-fit: cover; /* Mantiene la proporción y recorta si es necesario */
+    border-radius: 8px; /* Bordes redondeados */
+    margin-right: 10px; /* Espaciado entre la imagen y el texto */
+}
+
+
+/* Contenedor del carrito */
+.carrito-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Se adapta dinámicamente */
+    gap: 15px;
+    padding: 10px;
+    justify-content: center;
+}
+
+/* Cada producto en el carrito */
+.carrito-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f8f8f8;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Imagen del producto en el carrito */
+.carrito-img {
+    width: 100%;
+    max-width: 200px;  /* Para que no sea demasiado grande */
+    height: 150px;
+    object-fit: cover;  /* Mantiene la proporción sin distorsión */
+    border-radius: 8px;
+}
+
+/* Información del producto */
+.carrito-item div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Botones */
+.btn {
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e6005c;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .carrito-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+

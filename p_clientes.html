@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes Bradalú</title>
+    <link rel="stylesheet" href="./static/css/styles.css">
+    <script defer src="./static/js/carrito.js"></script>
+</head>
+<body>
+    <header>
+        <img src="./static/img/logo.jpeg" alt="Floristería Bradalú" class="logo">
+        <h1>nuestros clientes</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="flores.html">Flores</a></li>
+                <li><a href="ramos.html">Ramos</a></li>
+                <li><a href="p_clientes.html">Nuestros clientes</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="inicio">
+            <h2>Bienvenido a nuestra floristería</h2>
+            <p>Estos son algunos de los pedidos.<br>
+                que han encargado nuestros clientes<br> 
+            </p><br>
+        </section>
+        
+        <section id="ramos" class="catalogo">
+            <h2>Nuestros clientes</h2>
+            <div class="grid">
+                <div class="producto">
+                    <img src="./static/img/pedidos_clientes/baul decorado.jpeg" alt="baul decorado">
+                    <h3>Baul decorado</h3>
+                    <p>$60.000</p>
+                    <button class="agregar-carrito" data-nombre="baul decorado" data-precio="60000" data-imagen="./static/img/pedidos_clientes/baul decorado.jpeg">
+                        Agregar al carrito
+                    </button>
+                </div>
+                <div class="producto">
+                    <img src="./static/img/pedidos_clientes/Gerbera sencilla decorada.jpeg" alt="Gerbera sencilla decorada">
+                    <h3>Gerbera sencilla decorada</h3>
+                    <p>$6.000</p>
+                    <button class="agregar-carrito" data-nombre="Gerbera sencilla decorada" data-precio="6000" data-imagen="./static/img/pedidos_clientes/Gerbera sencilla decorada.jpeg">
+                        Agregar al carrito
+                    </button>
+                </div>
+                <div class="producto">
+                    <img src="./static/img/pedidos_clientes/Gerbera decorada.jpeg" alt="Gerbera decorada">
+                    <h3>Gerbera decorada</h3>
+                    <p>$7.0000</p>
+                    <button class="agregar-carrito" data-nombre="Gerbera decorada" data-precio="7000" data-imagen="./static/img/pedidos_clientes/Gerbera decorada.jpeg">
+                        Agregar al carrito
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+        <!-- Botón fijo del carrito -->
+        <button id="carrito-icono" onclick="window.location.href='carrito.html'">
+            🛒 <span id="contador-carrito">0</span>
+        </button>
+    
+        <!--Pie de pagina-->
+        <footer>
+            <div class="contenedor-footer">
+                <div class="content-foo">
+                    <h4>número de contacto</h4>
+                    <a href="https://api.whatsapp.com/send?phone=573227082256">+57 322 708 2256</a>
+                </div>
+                <div class="content-foo">
+                    <h4>Correo</h4>
+                    <a href="mailto:bradalufloristeria@gmail.com">bradalufloristeria@gmail.com</a>
+                </div>
+                <div class="content-foo">
+                    <h4>Ubicación</h4>
+                    <p>Calle 53#19-06</p>
+                </div>
+                <div class="content-foo">
+                    <h4>Redes</h4>
+                    <a href="https://www.facebook.com/profile.php?id=61572378342381">Facebook</a> <br>
+                    <a href="https://www.instagram.com/flores_bradalu/">instagram</a> <br>
+                </div>
+            </div>
+            <h2 class="titulo-final">&copy; Bradalú</h2>
+        </footer>
+</body>
+</html>
