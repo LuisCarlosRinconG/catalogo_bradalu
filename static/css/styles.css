@@ -287,12 +287,13 @@ footer {
 }
 
 #inicio img {
-    width: 100vw; /* Ocupará todo el ancho de la ventana */
-    height: auto; /* Mantiene la proporción */
-    max-width: none; /* Evita restricciones en el tamaño */
-    display: block; /* Evita espacios adicionales */
+    width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+    max-width: 100vw; /* Evita que la imagen sea más ancha que la pantalla */
+    height: auto; /* Mantiene la proporción original */
+    display: block; /* Evita espacios innecesarios alrededor */
     margin: 0 auto; /* Centra la imagen */
 }
+
 
 @media (max-width: 768px) {
     #inicio img {
