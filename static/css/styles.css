@@ -286,10 +286,18 @@ footer {
     background-color: #e6005c;
 }
 
+#inicio img {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 1200px; /* Opcional, para evitar que se agrande demasiado */
+    height: auto; /* Mantiene la proporción */
+    display: block; /* Elimina espacios innecesarios */
+    margin: 0 auto; /* Centra la imagen */
+}
+
+
 /* Responsivo */
 @media (max-width: 600px) {
     .carrito-container {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 }
-
